@@ -36,6 +36,12 @@ public class Test {
 			double srcPortEntropy = objPA.calcEntropy(srcPortHashMap);
 			double desPortEntropy = objPA.calcEntropy(desPortHashMap);
 			
+			//debug
+			System.out.println(srcIPEntropy);
+			System.out.println(desIPEntropy);
+			System.out.println(srcPortEntropy);
+			System.out.println(desPortEntropy);
+			
 			final double scale = 2.48f;
 			
 			srcIP.append(" " + String.format("%.1f", srcIPEntropy/scale));
