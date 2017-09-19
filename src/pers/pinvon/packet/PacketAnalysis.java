@@ -37,6 +37,9 @@ public class PacketAnalysis {
 				String[] row = str.split(",");
 				countEveryValue(srcIP, row[0]);
 				countEveryValue(desIP, row[1]);
+				if(row.length < 3){
+					System.out.println(row.length);
+				}
 				if(!row[2].equals(' ')){
 					countEveryValue(srcPort, row[2]);
 					countEveryValue(desPort, row[3]);

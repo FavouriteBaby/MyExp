@@ -22,7 +22,7 @@ public class Test {
 		
 		//for(int nIndex = 0; nIndex < 60; ++nIndex){
 			//path = "data/" + nIndex + ".txt";
-			path = "data/result_0.txt";
+			path = "data/hasIP.txt";
 			objPA.count(path);
 			
 			HashMap<String, Integer> srcIPHashMap = objPA.getSrcIPList();
