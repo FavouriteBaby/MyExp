@@ -26,10 +26,11 @@ public class OperateFile {
 		}
 	}
 	
-	public static void writeFile(String filePath){
+	public static void writeFile(String filePath, boolean isAppend, CallBack call){
 		BufferedWriter writer = null;
 		try{
-			writer = new BufferedWriter(new FileWriter(filePath));
+			writer = new BufferedWriter(new FileWriter(filePath, isAppend));
+			call.doSomething(writer);
 			/*
 			for(ProtocolData data : content){
 				writer.write(data.getDesIP() + "," + data.getDesIP() + "," + data.getSrcPort() + "," + data.getDesPort());
@@ -41,6 +42,7 @@ public class OperateFile {
 		}finally{
 			if(writer != null)
 				try{
+					writer.flush();
 					writer.close();
 				}catch(IOException e){
 					e.printStackTrace();

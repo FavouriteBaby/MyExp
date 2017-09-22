@@ -1,6 +1,7 @@
 package pers.pinvon.packet;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -27,6 +28,8 @@ public class PacketAnalysis {
 			public void doSomething(BufferedReader reader){
 				dealRow(reader);
 			}
+			
+			public void doSomething(BufferedWriter writer){}
 		});
 	}
 	
